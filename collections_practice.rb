@@ -38,10 +38,5 @@ def sum_array(arr)
 end
 
 def add_s(arr)
-  arr.map.with_index do |el, i|
-    if i != 1
-      el << "s"
-    end
-    el
-  end
+  arr.map.with_index {|el, i| i != 1 ? el << "s" : el}
 end
